@@ -54,17 +54,18 @@ a {
   font-size: 14px;
   font-weight: 700;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 button {
-  background-color: rgb(119, 54, 180);
+  background-color: rgb(53, 56, 185);
   height: 54px;
   width: 432px;
   border-radius: 12px;
   color: white;
   font-weight: bold;
   font-size: 16px;
-  border-color: rgb(119, 54, 180);
+  cursor: pointer;
   border-width: 2px;
   border-style: bold;
 }
@@ -88,6 +89,18 @@ input {
   border-style: solid;
   font-size: 16px;
   padding: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .mt-smaller {
@@ -119,4 +132,32 @@ input {
 .logo {
   width: 88px;
   height: auto;
+}
+
+.auth-container {
+  background-color: rgb(81, 83, 223);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-content {
+  display: flex;
+  width: 480px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 440px;
+  border-radius: 24px;
+  background-color: white;
+}
+.auth-container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
 }
