@@ -4,8 +4,119 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: "noto sans", sans-serif;
+  color: black;
 }
 
 h1 {
-  font-family: "noto sans", sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 0px;
+  padding: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+h4 {
+  font-size: 16px;
+  color: #7c7c7c;
+  font-weight: 700px;
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  font-size: 14px;
+  color: #7c7c7c;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+}
+
+label {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+a {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+button {
+  background-color: rgb(119, 54, 180);
+  height: 54px;
+  width: 432px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-color: rgb(119, 54, 180);
+  border-width: 2px;
+  border-style: bold;
+}
+
+button.small {
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  border-radius: 8px;
+  width: 90px;
+  height: 36px;
+}
+
+input {
+  background-color: white;
+  width: 100%;
+  height: 48px;
+  border-color: #06bee1;
+  border-radius: 8px;
+  color: black;
+  border-style: solid;
+  font-size: 16px;
+  padding: 16px;
+}
+
+.mt-smaller {
+  margin-top: 8px;
+}
+
+.mt-small {
+  margin-top: 12px;
+}
+
+.mt-middle {
+  margin-top: 16px;
+}
+
+.mt-large {
+  margin-top: 24px;
+}
+.mt-larger {
+  margin-top: 36px;
+}
+.mt-middle {
+  margin-top: 16px;
+}
+
+.auth-container {
+  width: 432px;
+}
+
+.logo {
+  width: 88px;
+  height: auto;
 }
