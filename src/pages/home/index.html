@@ -2,10 +2,24 @@
 <html lang="en">
   <head>
     <title>Wallet Home</title>
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
-    <div>
+    <div class="home-content-container">
+      <div class="navigation-bar">
+        <img
+          class="logo-navigation-bar"
+          src="../../../src/img/wallet.png"
+          alt="Wallet Logo"
+        />
+        <div id="user-bar" class="navigation-bar-user">
+          <div id="user-logo" class="navigation-bar-user-logo"></div>
+          <p id="user-email">exemplo@hotmail.com</p>
+          <a id="logout-link" href="#">exit</a>
+        </div>
+      </div>
       <h1>HOME</h1>
     </div>
   </body>
