@@ -81,14 +81,15 @@ button.small {
 
 input {
   background-color: white;
-  width: 100%;
+  width: 420px;
   height: 48px;
   border-color: #06bee1;
   border-radius: 8px;
   color: black;
   border-style: solid;
   font-size: 16px;
-  padding: 16px;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .full-width {
