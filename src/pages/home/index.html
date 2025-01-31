@@ -12,7 +12,7 @@
         <img
           src="../../img/wallet.png"
           class="logo-navbar"
-          alt="Logo Wallet App"
+          alt="Wallet App Logo"
         />
         <div class="navbar-calendar-container">
           <input class="input-calendar" id="selected-date" type="date" />
@@ -30,8 +30,8 @@
       <div class="table-container">
         <div class="table-content-container">
           <div class="table-content-header">
-            <h2>Últimos lançamentos</h2>
-            <button onclick="onOpenModal()" class="small">Adicionar</button>
+            <h2>Latest Transactions</h2>
+            <button onclick="onOpenModal()" class="small">Add</button>
           </div>
           <table id="finances-table"></table>
         </div>
@@ -40,46 +40,46 @@
     <div id="modal" class="modal-background">
       <div class="modal-content">
         <div class="modal-content-header">
-          <h3>Adicionar lançamento</h3>
-          <button onclick="onCloseModal()" class="small">Fechar</button>
+          <h3>Add Transaction</h3>
+          <button onclick="onCloseModal()" class="small">Close</button>
         </div>
         <form id="form-finance-release" class="mt">
-          <label class="mt" for="input-title">Título:</label>
+          <label class="mt" for="input-title">Title:</label>
           <input
             class="mt smaller"
             type="text"
             id="input-title"
             name="input-title"
-            placeholder="Ex: Conta de energia"
+            placeholder="E.g.: Electricity Bill"
             required
           />
-          <label class="mt" for="input-value">Valor</label>
+          <label class="mt" for="input-value">Amount</label>
           <input
             class="mt smaller"
             type="number"
             step="any"
             id="input-value"
             name="input-value"
-            placeholder="R$ 0,00 (Use valores negativos para uma despesa)"
+            placeholder="$ 0.00 (Use negative values for an expense)"
             required
           />
-          <label class="mt" for="input-date">Data</label>
+          <label class="mt" for="input-date">Date</label>
           <input
             class="mt smaller"
             type="date"
             id="input-date"
             name="input-date"
-            placeholder="00/00/0000"
+            placeholder="MM/DD/YYYY"
             required
           />
-          <label class="mt" for="input-category">Categoria</label>
+          <label class="mt" for="input-category">Category</label>
           <select
             class="mt smaller"
             id="input-category"
             name="input-category"
             required
           ></select>
-          <button type="submit" class="mt full-width">Adicionar</button>
+          <button type="submit" class="mt full-width">Add</button>
         </form>
       </div>
     </div>
