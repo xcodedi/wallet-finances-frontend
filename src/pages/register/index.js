@@ -1,4 +1,4 @@
-const BASE_API_URL = "https://mp-wallet-app-api.herokuapp.com"; // Centralizes the API URL
+const BASE_API_URL = "https"; // Centralizes the API URL
 
 // Function to perform the POST request to the API and register the user
 const onCallRegister = async (email, name) => {
