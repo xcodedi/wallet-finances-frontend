@@ -183,48 +183,71 @@ const renderFinanceElements = (data) => {
   balanceSubtextElement.appendChild(balanceSubtext);
   financeCard4.appendChild(balanceSubtextElement);
 
+  // Create a text node for the balance, formatted as currency
   const balanceText = document.createTextNode(
     new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL",
     }).format(totalValue)
   );
+
+  // Create an h1 element for the balance text
   const balanceTextElement = document.createElement("h1");
+  // Set the id for the balance element
   balanceTextElement.id = "balance-element";
+  // Set the class name for styling
   balanceTextElement.className = "mt smaller";
+  // Set the color style for the balance text
   balanceTextElement.style.color = "#5936CD";
+  // Append the balance text to the h1 element
   balanceTextElement.appendChild(balanceText);
+  // Append the balance element to the finance card
   financeCard4.appendChild(balanceTextElement);
 };
 
+// Function to load finance data
 const onLoadFinancesData = async () => {
   try {
+    // Get the selected date value from the input field
     const dateInputValue = document.getElementById("selected-date").value;
+    // Get the user email from localStorage
     const email = localStorage.getItem("userEmail");
+    // Fetch finance data from the server with the selected date and user email
     const result = await fetch(`https${dateInputValue}`, {
       method: "GET",
       headers: {
         email: email,
       },
     });
+    // Parse the response as JSON
     const data = await result.json();
+    // Render finance elements with the fetched data
     renderFinanceElements(data);
+    // Render the finance list with the fetched data
     renderFinancesList(data);
+    // Return the fetched data
     return data;
   } catch (error) {
+    // Return an error object if the fetch fails
     return { error };
   }
 };
 
+// Function to load user information
 const onLoadUserInfo = () => {
+  // Get the user email from localStorage
   const email = localStorage.getItem("userEmail");
+  // Get the user name from localStorage
   const name = localStorage.getItem("userName");
 
+  // Get the navbar user info container element
   const navbarUserInfo = document.getElementById("navbar-user-container");
+  // Get the navbar user avatar element
   const navbarUserAvatar = document.getElementById("navbar-user-avatar");
 
-  // add user email
+  // Create a paragraph element for the user email
   const emailElement = document.createElement("p");
+  // Create a text node with the user email
   const emailText = document.createTextNode(email);
   emailElement.appendChild(emailText);
   navbarUserInfo.appendChild(emailElement);
@@ -319,24 +342,38 @@ const onCreateFinanceRelease = async (target) => {
   }
 };
 
+// Function to set the initial date in the date input field
 const setInitialDate = () => {
+  // Get the date input element by its ID
   const dateInput = document.getElementById("selected-date");
+  // Get the current date in ISO format and split to get the date part only
   const nowDate = new Date().toISOString().split("T")[0];
+  // Set the value of the date input to the current date
   dateInput.value = nowDate;
+  // Add an event listener to the date input to load finance data when the date changes
   dateInput.addEventListener("change", () => {
     onLoadFinancesData();
   });
 };
 
+// Function to be called when the window loads
 window.onload = () => {
+  // Set the initial date in the date input field
   setInitialDate();
+  // Load user information
   onLoadUserInfo();
+  // Load finance data
   onLoadFinancesData();
+  // Load categories
   onLoadCategories();
 
+  // Get the finance release form by its ID
   const form = document.getElementById("form-finance-release");
+  // Add an event handler for the form submission
   form.onsubmit = (event) => {
+    // Prevent the default form submission behavior
     event.preventDefault();
+    // Call the function to create a finance release with the form data
     onCreateFinanceRelease(event.target);
   };
 };
